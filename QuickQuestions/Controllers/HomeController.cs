@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuickQuestions.DAL;
+using QuickQuestions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +10,13 @@ namespace QuickQuestions.Controllers
 {
     public class HomeController : Controller
     {
+        private QuizContext db = new QuizContext();
+
         public ActionResult Index()
         {
+            Category category = new Category { CategoryId = 1, CategoryName = "JavaScript" };
+            db.Categories.Add(category);
+            db.SaveChanges();
             return View();
         }
 
