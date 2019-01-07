@@ -14,9 +14,7 @@ namespace QuickQuestions.Controllers
 
         public ActionResult Index()
         {
-            Category category = new Category { CategoryId = 1, CategoryName = "JavaScript" };
-            db.Categories.Add(category);
-            db.SaveChanges();
+            var categories = db.Categories.ToList();
             return View();
         }
 

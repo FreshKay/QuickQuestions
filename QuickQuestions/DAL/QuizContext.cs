@@ -15,6 +15,12 @@ namespace QuickQuestions.DAL
 
         }
 
+        static QuizContext()
+        {
+            Database.SetInitializer<QuizContext>(new QuizInitializer());
+        }
+
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
