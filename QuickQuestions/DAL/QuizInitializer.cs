@@ -1,21 +1,17 @@
-﻿using QuickQuestions.Models;
+﻿using QuickQuestions.Migrations;
+using QuickQuestions.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 
 namespace QuickQuestions.DAL
 {
-    public class QuizInitializer : DropCreateDatabaseAlways<QuizContext>
+    public class QuizInitializer : MigrateDatabaseToLatestVersion<QuizContext, Configuration>
     {
-        protected override void Seed(QuizContext context)
-        {
-            SeedQuizData(context);
-            base.Seed(context);
-        }
-
-        private void SeedQuizData(QuizContext context)
+        public static void SeedQuizData(QuizContext context)
         {
             var categories = new List<Category>
             {
@@ -26,7 +22,7 @@ namespace QuickQuestions.DAL
                 new Category { CategoryId = 5, CategoryName = "HTML"},
             };
 
-            categories.ForEach(k => context.Categories.Add(k));
+            categories.ForEach(k => context.Categories.AddOrUpdate(k));
             context.SaveChanges();
 
             var questions = new List<Question>
@@ -40,7 +36,7 @@ namespace QuickQuestions.DAL
                 new Question { QuestionId = 7, CategoryId = 5, QuestionContent = "Is it or not?"},
             };
 
-            questions.ForEach(k => context.Questions.Add(k));
+            questions.ForEach(k => context.Questions.AddOrUpdate(k));
             context.SaveChanges();
 
 
@@ -58,7 +54,7 @@ namespace QuickQuestions.DAL
 
             };
 
-            answers.ForEach(k => context.Answers.Add(k));
+            answers.ForEach(k => context.Answers.AddOrUpdate(k));
             context.SaveChanges();
         }
     }
