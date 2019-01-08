@@ -1,6 +1,11 @@
 ﻿body {
+    background-color: #7C90FF;
     padding-top: 50px;
     padding-bottom: 20px;
+}
+
+.jumbotron {
+    background-color: #D2D8FF;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +26,44 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: end;
+}
+
+.navbar .navbar-collapse li {
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+
+.navbar .navbar-nav li a {
+    color: #EEEEEE;
+
+}
+
+    .navbar .navbar-nav li a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    .navbar .navbar-nav li a:hover::before {
+        width:65%;
+    }
+    
+.navbar .navbar-brand {
+    color: #EEEEEE;
+    font-family: 'Monoton', cursive;
 }
