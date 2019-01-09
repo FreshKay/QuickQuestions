@@ -1,69 +1,115 @@
-﻿body {
+﻿html, body {
     background-color: #7C90FF;
+    background-image: url('Images/tring.png');
     padding-top: 50px;
-    padding-bottom: 20px;
+    height: 100%;
 }
 
-.jumbotron {
-    background-color: #D2D8FF;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-}
-
-.navbar .navbar-collapse {
-    text-align: end;
-}
-
-.navbar .navbar-collapse li {
-    display: inline-block;
-    margin-left: 40px;
+.all {
+    min-height: 100%;
     position: relative;
 }
 
-.navbar .navbar-nav li a {
-    color: #EEEEEE;
-
+.container-body {
+    padding-bottom: 60px;
 }
 
-    .navbar .navbar-nav li a::before {
-        content: '';
-        display: block;
-        height: 5px;
-        background-color: white;
+    .footer {
         position: absolute;
-        top: 0;
-        width: 0%;
-        transition: all ease-in-out 250ms;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #222;
+        text-align: center;
     }
 
-    .navbar .navbar-nav li a:hover::before {
-        width:65%;
+        .footer li {
+            display: inline-block;
+            margin-left: 40px;
+            margin-right: 140px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+            .footer li a {
+                color: #D2D8FF;
+                text-decoration: none;
+            }
+
+                .footer li a::before {
+                    content: '';
+                    display: block;
+                    height: 1px;
+                    background-color: white;
+                    margin-top: 10px;
+                    position: absolute;
+                    top: 0;
+                    width: 0%;
+                    transition: all ease-in-out 250ms;
+                }
+
+                .footer li a:hover::before {
+                    width: 100%;
+                    color: #EEEEEE;
+                }
+
+
+    .jumbotron {
+        background-color: #D2D8FF;
     }
-    
-.navbar .navbar-brand {
-    color: #EEEEEE;
-    font-family: 'Monoton', cursive;
-}
+
+    .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .dl-horizontal dt {
+        white-space: normal;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: end;
+    }
+
+        .navbar .navbar-collapse li {
+            display: inline-block;
+            margin-left: 40px;
+            position: relative;
+        }
+
+    .navbar .navbar-nav li a {
+        color: #EEEEEE;
+    }
+
+        .navbar .navbar-nav li a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            width: 0%;
+            transition: all ease-in-out 250ms;
+        }
+
+        .navbar .navbar-nav li a:hover::before {
+            width: 65%;
+        }
+
+    .navbar .navbar-brand {
+        color: #EEEEEE;
+        font-family: 'Monoton', cursive;
+    }
+
+
