@@ -62,6 +62,72 @@ html, body {
     margin-bottom: 40px;
 }
 
+    jumbotron a {
+        text-decoration: none;
+        transition: .5s ease;
+    }
+
+.row a{
+    text-decoration: none;
+}
+
+.button {
+    text-decoration: none;
+    margin: .4em;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 55px;
+    cursor: pointer;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+    background: #6761bf;
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes hover {
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+.hover {
+    display: inline-block;
+    transition-duration: .5s;
+    transition-property: transform;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+}
+
+    .hover:hover {
+        color: white;
+        transform: translateY(-6px);
+        animation-name: hover;
+        animation-duration: 1.5s;
+        animation-delay: 0.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+.jumbotron .row{
+    text-align: center;
+}
+
+    .jumbotron .row .col-md-4 {
+        margin-bottom: 40px;
+    }
+
+
     .jumbotron p {
         text-align: center;
     }

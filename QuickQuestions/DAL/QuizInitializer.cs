@@ -15,11 +15,11 @@ namespace QuickQuestions.DAL
         {
             var categories = new List<Category>
             {
-                new Category { CategoryId = 1, CategoryName = "JavaScript"},
-                new Category { CategoryId = 2, CategoryName = "C#"},
-                new Category { CategoryId = 3, CategoryName = "Java"},
-                new Category { CategoryId = 4, CategoryName = "Asp. net"},
-                new Category { CategoryId = 5, CategoryName = "HTML"},
+                new Category { CategoryId = 1, CategoryName = "JavaScript", CategoryImg = "csharp.png"},
+                new Category { CategoryId = 2, CategoryName = "C#", CategoryImg = "csharp.png"},
+                new Category { CategoryId = 3, CategoryName = "Java", CategoryImg = "csharp.png"},
+                new Category { CategoryId = 4, CategoryName = "Asp. net", CategoryImg = "csharp.png"},
+                new Category { CategoryId = 5, CategoryName = "HTML", CategoryImg = "csharp.png"},
             };
 
             categories.ForEach(k => context.Categories.AddOrUpdate(k));

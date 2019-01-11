@@ -1,5 +1,6 @@
 ﻿using QuickQuestions.DAL;
 using QuickQuestions.Models;
+using QuickQuestions.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,12 @@ namespace QuickQuestions.Controllers
         public ActionResult Index()
         {
             var categories = db.Categories.ToList();
-            return View();
+            var vm = new HomeViewModel
+            {
+                Categories = categories
+            };
+         
+            return View(vm);
         }
 
         public ActionResult Info()

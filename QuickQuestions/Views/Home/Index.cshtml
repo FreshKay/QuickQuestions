@@ -1,4 +1,7 @@
-﻿@{
+﻿@model QuickQuestions.ViewModels.HomeViewModel
+@using QuickQuestions.Infrastructure
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -11,43 +14,15 @@
 <div class="jumbotron">
     <h2>Categories:</h2>
     <div class="row">
-        <div class="col-md-4">
-            <h2>Java</h2>
-            <p>
-                Link
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>C#</h2>
-            <p>
-                Link
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>JS</h2>
-            <p>
-                Link
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h2>.NEt</h2>
-            <p>
-                Link
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>C#</h2>
-            <p>
-                Link
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>JS</h2>
-            <p>
-                Link
-            </p>
-        </div>
+
+        @foreach (var category in Model.Categories)
+        {
+            <div class="col-md-4">
+                <a class="button hover" href="@Url.Action("Start", "Quiz", new { categoryName = category.CategoryName.ToLower() })">
+                        @category.CategoryName
+                </a>
+            </div>
+        }
+        
     </div>
 </div>
