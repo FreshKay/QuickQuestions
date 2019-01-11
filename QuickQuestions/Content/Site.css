@@ -1,4 +1,8 @@
-﻿html, body {
+﻿@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
     background-color: #7C90FF;
     background-image: url('Images/tring.png');
     padding-top: 50px;
@@ -41,35 +45,12 @@
     }
 
         .footer li {
+            font-size: 10px;
+            color: white;
             display: inline-block;
-            margin-left: 40px;
-            margin-right: 140px;
-            margin-top: 20px;
+            margin-top: 30px;
             position: relative;
         }
-
-            .footer li a {
-                color: #D2D8FF;
-                text-decoration: none;
-            }
-
-                .footer li a::before {
-                    content: '';
-                    display: block;
-                    height: 1px;
-                    background-color: white;
-                    margin-top: 10px;
-                    position: absolute;
-                    top: 0;
-                    width: 0%;
-                    transition: all ease-in-out 250ms;
-                }
-
-                .footer li a:hover::before {
-                    width: 100%;
-                    color: #EEEEEE;
-                }
-
 
 .jumbotron {
     background-color: #222;
