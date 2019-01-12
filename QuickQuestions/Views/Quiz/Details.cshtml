@@ -1,0 +1,20 @@
+﻿@model QuickQuestions.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="jumbotron">
+    <h2>@Model.CategoryName</h2>
+
+    <p>
+        You selected @Model.CategoryName quiz. This quiz contains @Model.Questions.Count() quesitons.
+        You will be anwsering 10 questions. For each question you have 10 seconds to answer/
+        <br />
+
+
+        If You are ready press start!
+        <button>START</button>
+    </p>
+</div>
+

@@ -18,7 +18,7 @@
         @foreach (var category in Model.Categories)
         {
             <div class="col-md-4">
-                <a class="button hover" href="@Url.Action("Start", "Quiz", new { categoryName = category.CategoryName.ToLower() })">
+                <a class="button hover" href="@Url.Action("Details", "Quiz", new { id = category.CategoryId })">
                         @category.CategoryName
                 </a>
             </div>
