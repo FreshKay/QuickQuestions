@@ -1,15 +1,10 @@
 ﻿@model QuickQuestions.ViewModels.HomeViewModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Categories";
 }
 
 
-<div class="opener">
-    <p class="main"><h1>Are you ready to test your</h1><br /><h1>knowledge?</h1></p>
-    <p><h3>QuickQuestionis a quiz site where you can test your IT knowledge!</h3><br />
-    <h3>Pick yout category and answer some quiestions to check your knowledge level!</h3></p> 
-</div>
 <div class="jumbotron">
     <h2>Categories:</h2>
     <div class="row">
@@ -18,10 +13,10 @@
         {
             <div class="col-md-4">
                 <a class="button hover" href="@Url.Action("Details", "Quiz", new { id = category.CategoryId })">
-                        @category.CategoryName
+                    @category.CategoryName
                 </a>
             </div>
         }
-        
+
     </div>
 </div>

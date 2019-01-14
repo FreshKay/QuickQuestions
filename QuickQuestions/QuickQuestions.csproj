@@ -216,6 +216,7 @@
     <Content Include="Views\Home\Howto.cshtml" />
     <Content Include="Views\Quiz\Start.cshtml" />
     <Content Include="Views\Quiz\Details.cshtml" />
+    <Content Include="Views\Home\Categories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -33,5 +33,16 @@ namespace QuickQuestions.Controllers
         {
             return View();
         }
+
+        public ActionResult Categories()
+        {
+            var categories = db.Categories.ToList();
+            var vm = new HomeViewModel
+            {
+                Categories = categories
+            };
+
+            return View(vm);
+        }
     }
 }
