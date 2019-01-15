@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace QuickQuestions.Models
 {
@@ -6,13 +7,9 @@ namespace QuickQuestions.Models
     {
         public int AnswerId { get; set; }
         public int QuestionId { get; set; }
-        [Required(ErrorMessage = "Enter the answer!")]
-        [StringLength(100)]
-        public string AnswerContent { get; set; }
-        [Required(ErrorMessage = "Choose the correct answer!")]
-        public bool GoodAnswer { get; set; }
+        public string AnswerText { get; set; }
         public string AnswerImg { get; set; }
 
-        public virtual Question Question { get; set; }
+        public virtual ICollection<Question> Question { get; set; }
     }
 }

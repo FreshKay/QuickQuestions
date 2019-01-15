@@ -166,10 +166,15 @@
     <Compile Include="Migrations\201901071235010_InitialCreate.Designer.cs">
       <DependentUpon>201901071235010_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901151355395_ChangesToModel1.cs" />
+    <Compile Include="Migrations\201901151355395_ChangesToModel1.Designer.cs">
+      <DependentUpon>201901151355395_ChangesToModel1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Quiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
@@ -236,6 +241,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901071235010_InitialCreate.resx">
       <DependentUpon>201901071235010_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901151355395_ChangesToModel1.resx">
+      <DependentUpon>201901151355395_ChangesToModel1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

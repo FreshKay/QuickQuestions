@@ -42,15 +42,15 @@ namespace QuickQuestions.DAL
 
             var answers = new List<Answer>
             {
-                new Answer { AnswerId = 1, QuestionId = 1, AnswerContent = "No", GoodAnswer = true},
-                new Answer { AnswerId = 2, QuestionId = 1, AnswerContent = "No", GoodAnswer = false},
-                new Answer { AnswerId = 3, QuestionId = 2, AnswerContent = "No", GoodAnswer = false},
-                new Answer { AnswerId = 4, QuestionId = 3, AnswerContent = "No", GoodAnswer = true},
-                new Answer { AnswerId = 5, QuestionId = 4, AnswerContent = "No", GoodAnswer = true},
-                new Answer { AnswerId = 6, QuestionId = 5, AnswerContent = "No", GoodAnswer = true},
-                new Answer { AnswerId = 7, QuestionId = 6, AnswerContent = "No", GoodAnswer = true},
-                new Answer { AnswerId = 8, QuestionId = 7, AnswerContent = "No", GoodAnswer = false},
-                new Answer { AnswerId = 9, QuestionId = 7, AnswerContent = "No", GoodAnswer = true},
+                new Answer { AnswerId = 1, QuestionId = 1},
+                new Answer { AnswerId = 2, QuestionId = 1},
+                new Answer { AnswerId = 3, QuestionId = 2},
+                new Answer { AnswerId = 4, QuestionId = 3},
+                new Answer { AnswerId = 5, QuestionId = 4},
+                new Answer { AnswerId = 6, QuestionId = 5},
+                new Answer { AnswerId = 7, QuestionId = 6},
+                new Answer { AnswerId = 8, QuestionId = 7},
+                new Answer { AnswerId = 9, QuestionId = 7},
 
             };
 

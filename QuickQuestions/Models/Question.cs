@@ -14,6 +14,7 @@ namespace QuickQuestions.Models
         [StringLength(100)]
         public string QuestionContent { get; set; }
         public string QuestionImg { get; set; }
+        public int RightAnswerId { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual ICollection<Answer> Answers { get; set; }
