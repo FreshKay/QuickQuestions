@@ -25,15 +25,28 @@ namespace QuickQuestions.DAL
             categories.ForEach(k => context.Categories.AddOrUpdate(k));
             context.SaveChanges();
 
+            var quizzes = new List<Quiz>
+            {
+                new Quiz { QuizID = 1 },
+                new Quiz { QuizID = 2 },
+                new Quiz { QuizID = 3 },
+                new Quiz { QuizID = 4 },
+                new Quiz { QuizID = 5 },
+
+            };
+
+            quizzes.ForEach(k => context.Quizzes.AddOrUpdate(k));
+            context.SaveChanges();
+
             var questions = new List<Question>
             {
-                new Question { QuestionId = 1, CategoryId = 1, QuestionContent = "Is it or not?"},
-                new Question { QuestionId = 2, CategoryId = 1, QuestionContent = "Is it or not?"},
-                new Question { QuestionId = 3, CategoryId = 2, QuestionContent = "Is it or not?"},
-                new Question { QuestionId = 4, CategoryId = 2, QuestionContent = "Is it or not?"},
-                new Question { QuestionId = 5, CategoryId = 3, QuestionContent = "Is it or not?"},
-                new Question { QuestionId = 6, CategoryId = 4, QuestionContent = "Is it or not?"},
-                new Question { QuestionId = 7, CategoryId = 5, QuestionContent = "Is it or not?"},
+                new Question { QuestionID = 1, QuizID = 1},
+                new Question { QuestionID = 2, QuizID = 1},
+                new Question { QuestionID = 3, QuizID = 1},
+                new Question { QuestionID = 4, QuizID = 1},
+                new Question { QuestionID = 5, QuizID = 1},
+                new Question { QuestionID = 6, QuizID = 1},
+                new Question { QuestionID = 7, QuizID = 1},
             };
 
             questions.ForEach(k => context.Questions.AddOrUpdate(k));
@@ -42,20 +55,21 @@ namespace QuickQuestions.DAL
 
             var answers = new List<Answer>
             {
-                new Answer { AnswerId = 1, QuestionId = 1},
-                new Answer { AnswerId = 2, QuestionId = 1},
-                new Answer { AnswerId = 3, QuestionId = 2},
-                new Answer { AnswerId = 4, QuestionId = 3},
-                new Answer { AnswerId = 5, QuestionId = 4},
-                new Answer { AnswerId = 6, QuestionId = 5},
-                new Answer { AnswerId = 7, QuestionId = 6},
-                new Answer { AnswerId = 8, QuestionId = 7},
-                new Answer { AnswerId = 9, QuestionId = 7},
+                new Answer { AnswerID = 1 , QuestionID = 1},
+                new Answer { AnswerID = 2 , QuestionID = 2},
+                new Answer { AnswerID = 3 , QuestionID = 3},
+                new Answer { AnswerID = 4 , QuestionID = 4},
+                new Answer { AnswerID = 5 , QuestionID = 5},
+                new Answer { AnswerID = 6 , QuestionID = 5},
+                new Answer { AnswerID = 7 , QuestionID = 6},
+                new Answer { AnswerID = 8 , QuestionID = 7},
+                new Answer { AnswerID = 9 , QuestionID = 7},
 
             };
 
             answers.ForEach(k => context.Answers.AddOrUpdate(k));
             context.SaveChanges();
+
         }
     }
 }

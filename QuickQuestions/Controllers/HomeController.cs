@@ -20,7 +20,7 @@ namespace QuickQuestions.Controllers
             {
                 Categories = categories
             };
-         
+
             return View(vm);
         }
 

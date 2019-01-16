@@ -13,6 +13,7 @@ namespace QuickQuestions.Controllers
 
         public ActionResult Start()
         {
+
             return View();
         }
 

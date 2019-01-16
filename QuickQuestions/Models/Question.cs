@@ -8,15 +8,18 @@ namespace QuickQuestions.Models
 {
     public class Question
     {
-        public int QuestionId { get; set; }
-        public int CategoryId { get; set; }
-        [Required(ErrorMessage ="Enter the question!")]
-        [StringLength(100)]
-        public string QuestionContent { get; set; }
-        public string QuestionImg { get; set; }
-        public int RightAnswerId { get; set; }
+        public Question()
+        {
+            this.Answers = new HashSet<Answer>();
+            this.Choices = new HashSet<Choice>();
+        }
 
-        public virtual Category Category { get; set; }
+        public int QuestionID { get; set; }
+        public string QuestionText { get; set; }
+        public int? QuizID { get; set; }
+
         public virtual ICollection<Answer> Answers { get; set; }
+        public virtual ICollection<Choice> Choices { get; set; }
+        public virtual Quiz Quiz { get; set; }
     }
 }

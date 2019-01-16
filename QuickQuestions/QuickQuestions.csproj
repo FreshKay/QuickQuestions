@@ -170,9 +170,14 @@
     <Compile Include="Migrations\201901151355395_ChangesToModel1.Designer.cs">
       <DependentUpon>201901151355395_ChangesToModel1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901161507148_NewDB.cs" />
+    <Compile Include="Migrations\201901161507148_NewDB.Designer.cs">
+      <DependentUpon>201901161507148_NewDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -244,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901151355395_ChangesToModel1.resx">
       <DependentUpon>201901151355395_ChangesToModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901161507148_NewDB.resx">
+      <DependentUpon>201901161507148_NewDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

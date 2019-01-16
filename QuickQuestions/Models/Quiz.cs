@@ -7,9 +7,14 @@ namespace QuickQuestions.Models
 {
     public class Quiz
     {
-        public int QuizId { get; set; }
-        public TimeSpan? Duration { get; set; }
-        public int Score { get; set; }
+        public Quiz()
+        {
+            this.Questions = new HashSet<Question>();
+        }
+
+        public int QuizID { get; set; }
+        public string QuizName { get; set; }
+        public virtual Category Category { get; set; }
 
         public virtual ICollection<Question> Questions { get; set; }
     }
