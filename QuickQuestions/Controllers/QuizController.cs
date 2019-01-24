@@ -14,7 +14,6 @@ namespace QuickQuestions.Controllers
 
         public ActionResult Start()
         {
-
             return View();
         }
 
@@ -105,4 +104,5 @@ namespace QuickQuestions.Controllers
 
             return Json(new { result = finalResultQuiz }, JsonRequestBehavior.AllowGet);
         }
+    }
 }
