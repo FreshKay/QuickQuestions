@@ -27,11 +27,11 @@ namespace QuickQuestions.DAL
 
             var quizzes = new List<Quiz>
             {
-                new Quiz { QuizID = 1 },
-                new Quiz { QuizID = 2 },
-                new Quiz { QuizID = 3 },
-                new Quiz { QuizID = 4 },
-                new Quiz { QuizID = 5 },
+                new Quiz { QuizID = 1, QuizName = "C#" },
+                new Quiz { QuizID = 2, QuizName = "ASP.NET" },
+                new Quiz { QuizID = 3, QuizName = "JavaScrpit" },
+                new Quiz { QuizID = 4, QuizName = "JSON" },
+                new Quiz { QuizID = 5, QuizName = "Java" }
 
             };
 

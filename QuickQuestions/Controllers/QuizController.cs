@@ -23,19 +23,19 @@ namespace QuickQuestions.Controllers
             return View(details);
         }
 
-        [HttpGet]
-        public ActionResult SelectQuizz()
-        {
-            QuizViewModel quiz = new ViewModels.QuizViewModel();
-            quiz.ListOfQuizz = db.Quizzes.Select(q => new SelectListItem
-            {
-                Text = q.QuizName,
-                Value = q.QuizID.ToString()
+        //[HttpGet]
+        //public ActionResult SelectQuizz()
+        //{
+        //    QuizViewModel quiz = new ViewModels.QuizViewModel();
+        //    quiz.ListOfQuizz = db.Quizzes.Select(q => new SelectListItem
+        //    {
+        //        Text = q.QuizName,
+        //        Value = q.QuizID.ToString()
 
-            }).ToList();
+        //    }).ToList();
 
-            return View(quiz);
-        }
+        //    return View(quiz);
+        //}
 
         [HttpPost]
         public ActionResult SelectQuizz(QuizViewModel quiz)

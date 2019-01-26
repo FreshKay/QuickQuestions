@@ -9,14 +9,16 @@
     <h2>Categories:</h2>
     <div class="row">
 
-        @foreach (var category in Model.Categories)
+        @foreach (var quiz in Model.ListOfQuizz)
         {
             <div class="col-md-4">
-                <a class="button hover" href="@Url.Action("Details", "Quiz", new { id = category.CategoryId })">
-                    @category.CategoryName
+                <a class="button hover" href="@Url.Action("Details", "Quiz")">
+                    @quiz.QuizName
                 </a>
             </div>
         }
+
+
 
     </div>
 </div>

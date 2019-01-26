@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickQuestions.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,7 @@ namespace QuickQuestions.ViewModels
     {
         public int QuizID { get; set; }
         public string QuizName { get; set; }
-        public List<SelectListItem> ListOfQuizz { get; set; }
+        public List<Quiz> ListOfQuizz { get; set; }
 
     }
 
