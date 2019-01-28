@@ -1,5 +1,5 @@
 ﻿
-@model IQueryable<QuizApplicationMVC5.viewModels.QuestionVM>
+@model IQueryable<QuickQuestions.ViewModels.QuestionViewModel>
 
 @{
     int count = 1, countR = 0;
@@ -8,12 +8,7 @@
 
 <div class="container">
 
-    <!-- User Info -->
-    <div class="userConnected" style="border:2px dashed #cecaca; border-radius: 10px; margin-top: 3%;">
-
-        @{ Html.RenderPartial("_UserInfo");}
-
-    </div>
+ 
 
     <div class="Quiz">
 
@@ -62,7 +57,7 @@
 
 </div> <!-- END CONTAINER -->
 
-@section MyScritps
+@*@section scritps
 {
     <script type="text/javascript">
 
@@ -135,4 +130,4 @@
         });
 
     </script>
-}
+}*@
